@@ -2,7 +2,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
-
+This is a simple workout tracker application that allows uses to create workouts and give them the freedom to adjust the number of reps, sets, weight, type, duration of said workouts. This application also allows for users to keep track of their last seven workouts, as well as incorporating some graphs to help them analyze their progressions. 
 
 ## Table of Contents
   * [Usage](#usage)
