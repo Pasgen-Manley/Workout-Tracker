@@ -9,19 +9,15 @@ router.get("/api/workouts", (req, res) => {
         "$sum": "$exercises.duration"
       }
     }
-  }])
-    .then((result) => {
+  }]).then((result) => {
       res.json(result)
-  })
-  .catch((err) => {
-    res.status(400).json(err);
   })
 });
 
 //Gets workouts in 7 day range
 router.get("/api/workouts/range", (req, res) => {
   Workout.aggregate([{
-    "$sort" : { day : -1 }
+    "$sort" : { day : -1}
   },
   {
     "$limit" : 7
