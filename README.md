@@ -14,6 +14,7 @@ This is a simple workout tracker application that allows uses to create workouts
 Open the application via the deployed Heroku Link below.
 LINK: https://stormy-plateau-47635.herokuapp.com/
 
+![Screenshot_1](https://user-images.githubusercontent.com/82016491/137694159-74a12d8a-c96e-4f3f-a09b-019088109681.png)
 
 
 ## License
