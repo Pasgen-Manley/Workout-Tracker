@@ -12,7 +12,9 @@ This is a simple workout tracker application that allows uses to create workouts
 
 ## Usage
 Open the application via the deployed Heroku Link below.
-LINK: 
+LINK: https://stormy-plateau-47635.herokuapp.com/
+
+
 
 ## License
 This application is covered under the MIT license.
