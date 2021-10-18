@@ -35,11 +35,11 @@ const workoutSchema = new Schema({
   date: {
     type: Date,
     required: "Please enter date of workout",
-    default: Date.now
+    default: Date.now()
   },
   exercises: {
     type: [exerciseSchema],
-  }
+  },
 });
 
 const Workout = mongoose.model("Workout", workoutSchema);
