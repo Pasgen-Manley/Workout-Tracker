@@ -21,24 +21,25 @@ router.get("/api/workouts", (req, res) => {
 //Gets workouts in 7 day range
 router.get("/api/workouts/range", (req, res) => {
   Workout.aggregate([{
-    "addFields": {
+    "$sort" : { day : -1 }
+  },
+  {
+    "$limit" : 7
+  },
+  {
+    "$addFields": {
       "totalDuration": {
-        "sum": "$exercises.duration"
+        "$sum": "$exercise.duration"
       }
     }
-  }])
-    .sort({_id:-1}).limit(7)
-    .then(result => {
-      res.json(result)
-    })
-    .catch((err) => {
-      res.status(400).json(err);
-    })
+  }]).then((result) => {
+    res.json(result)
+  })
 });
 
 //Add an exercise
 router.put("/api/workouts/:id", function(req, res){
-  Workout.findByIdAndUpdate(req.params.ud, {
+  Workout.findByIdAndUpdate(req.params.id, {
     "$push": {
       "exercises": req.body
     }
