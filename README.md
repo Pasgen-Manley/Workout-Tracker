@@ -24,4 +24,3 @@ Please contact me for further information if you wish to be a contributor on thi
 Created by [Pasgen-Manley](https://github.com/Pasgen-Manley)
 
 If you have any questions please contact me at [pasgen95@gmail.com](pasgen95@gmail.com)
-
