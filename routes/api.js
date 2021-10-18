@@ -2,7 +2,7 @@ const router = require('express').Router();
 const Workout = require('../models/workout.js');
 
 //Gets last workout
-router.get("/api/workout", (req, res) => {
+router.get("/api/workouts", (req, res) => {
   Workout.aggregate([{
     "$addFields": {
       "totalDuration": {
@@ -19,7 +19,7 @@ router.get("/api/workout", (req, res) => {
 });
 
 //Gets workouts in 7 day range
-router.get("/api/workout/range", (req, res) => {
+router.get("/api/workouts/range", (req, res) => {
   Workout.aggregate([{
     "addFields": {
       "totalDuration": {
@@ -37,7 +37,7 @@ router.get("/api/workout/range", (req, res) => {
 });
 
 //Add an exercise
-router.put("/api/workout/:id", function(req, res){
+router.put("/api/workouts/:id", function(req, res){
   Workout.findByIdAndUpdate(req.params.ud, {
     "$push": {
       "exercises": req.body
@@ -49,7 +49,7 @@ router.put("/api/workout/:id", function(req, res){
 });
 
 //Add a workout
-router.post("/api/workout", function(req, res){
+router.post("/api/workouts", function(req, res){
   Workout.create({})
   .then((created) => {
     res.json(created);
